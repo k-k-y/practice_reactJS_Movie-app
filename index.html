@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<div id="root"></div>
+	</body>
+	<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+	<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<script type="text/babel">
+		const root = document.getElementById('root');
+
+		function saveBtn() {
+			return (
+				<button
+					style={{
+						backgroundColor: 'tomato',
+						color: 'white',
+						padding: '10px 20px',
+						borderRadius: 10,
+						border: 0,
+					}}
+				>
+					Save Changes
+				</button>
+			);
+		}
+		function confirmBtn() {
+			return <button>Confirm</button>;
+		}
+
+		function App() {
+			return (
+				<div>
+					<saveBtn />
+					<confirmBtn />
+				</div>
+			);
+		}
+
+		ReactDOM.render(<App />, root);
+	</script>
+</html>
