@@ -14,7 +14,6 @@ function TodoList() {
 		}
 		setTodoArray((currentArray) => [...currentArray, todo]);
 		setTodo('');
-		console.log(todoArray);
 	}
 
 	return (
