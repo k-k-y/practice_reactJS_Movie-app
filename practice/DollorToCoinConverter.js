@@ -33,19 +33,21 @@ function DollorToCoinConverter() {
 	return (
 		<div>
 			<h1>Converter: Dollors to Coins</h1>
-			{loading ? 'Loading...' : null}
-
-			<select onChange={onSelect}>
-				<option key="initial" disabled={isSelect}>
-					Select which coin do you want
-				</option>
-
-				{coins.map((item, index) => (
-					<option key={index} value={JSON.stringify(item)}>
-						{item.name} ({item.symbol}): {item.quotes.USD.price} USD
+			{loading ? (
+				<strong>Loading...</strong>
+			) : (
+				<select onChange={onSelect}>
+					<option key="initial" disabled={isSelect}>
+						Select which coin do you want
 					</option>
-				))}
-			</select>
+					{coins.map((item, index) => (
+						<option key={index} value={JSON.stringify(item)}>
+							{item.name} ({item.symbol}): {item.quotes.USD.price} USD
+						</option>
+					))}
+				</select>
+			)}
+
 			<hr />
 			<div>
 				<div>
