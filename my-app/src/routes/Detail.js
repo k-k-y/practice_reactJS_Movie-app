@@ -13,7 +13,7 @@ function Detail() {
 			['genres', 'id', 'like_count', 'rating', 'runtime', 'title', 'url', 'year'],
 			4
 		);
-		console.log(str);
+		console.log(json);
 		setMovieInfor(str);
 		setLoading(false);
 	};

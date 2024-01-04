@@ -1,0 +1,42 @@
+.movieContainer {
+	display: flex;
+	background-color: white;
+	padding: 20px;
+	margin-top: 40px;
+	box-shadow: -2px 5px 12px rgba(0, 0, 0, 0.7);
+}
+
+.movieList {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 40px;
+}
+
+.img {
+	width: 150px;
+	height: 200px;
+	margin-right: 20px;
+	position: relative;
+	bottom: 40px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.text {
+	flex-grow: 1;
+	color: #333333;
+	font-family: sans-serif;
+}
+
+#title {
+	font-size: 20px;
+	margin-bottom: 2px;
+}
+
+#link {
+	text-decoration: none;
+	color: black;
+}
+
+.background {
+	background-color: whitesmoke;
+}
