@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-
+import MovieInfor from '../components/MovieInfor';
 function Detail() {
 	const [loading, setLoading] = useState(true);
 	const [movieInfor, setMovieInfor] = useState('');
@@ -8,32 +8,16 @@ function Detail() {
 
 	const getDetails = async () => {
 		const json = await (await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)).json();
-		const str = JSON.stringify(
-			json.data.movie,
-			['genres', 'id', 'like_count', 'rating', 'runtime', 'title', 'url', 'year'],
-			4
-		);
-		console.log(json);
-		setMovieInfor(str);
+		console.log(json.data.movie);
 		setLoading(false);
+		setMovieInfor(json.data.movie);
 	};
 
 	useEffect(() => {
 		getDetails();
 	}, []);
 
-	return (
-		<div>
-			{loading ? (
-				<h1>Loading...</h1>
-			) : (
-				<div>
-					<h3>Showing details</h3>
-					<pre>{movieInfor}</pre>
-				</div>
-			)}
-		</div>
-	);
+	return <div>{loading ? <h1>Loading...</h1> : <MovieInfor infor={movieInfor} />}</div>;
 }
 
 export default Detail;

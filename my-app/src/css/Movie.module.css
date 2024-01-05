@@ -2,6 +2,7 @@
 	display: flex;
 	background-color: white;
 	padding: 20px;
+	border-radius: 20px;
 	margin-top: 40px;
 	box-shadow: -2px 5px 12px rgba(0, 0, 0, 0.7);
 }
@@ -38,5 +39,10 @@
 }
 
 .background {
-	background-color: whitesmoke;
+	background-color: mintcream;
+}
+
+#webTitle {
+	font-size: 50px;
+	text-align: center;
 }

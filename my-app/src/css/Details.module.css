@@ -1,0 +1,27 @@
+.font {
+	font-family: sans-serif;
+}
+
+.background {
+	background-color: mintcream;
+}
+
+.center {
+	text-align: center;
+}
+
+.pre {
+	font-size: 15px;
+	font-weight: 500px;
+	color: green;
+}
+
+.title {
+	font-size: 35px;
+	font-weight: 800;
+}
+
+.subTitle {
+	font-size: 25px;
+	font-weight: 700;
+}
